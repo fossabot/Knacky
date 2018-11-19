@@ -11,7 +11,7 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le suppor de Twiko' + member.displayName)
+        return channel.send('Bienvenue sur le support de Twiko' + member.displayName)
         console.log(`${member.displayName} à rejoind le serveur.`)
     }).catch(console.error)
 });

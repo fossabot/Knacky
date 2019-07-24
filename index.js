@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cfg require('./index.json'); // a garder en version desktop
 const token = process.env.token // a garder en version heroku
-const prefix = ("t!");
+const prefix = ("k!");
 
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
@@ -11,8 +11,8 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le support de Twiko' + member.displayName)
-        console.log(`${member.displayName} à rejoind le serveur.`)
+        return channel.send('Bienvenue sur le serveur' + member.displayName)
+        console.log(`${member.displayName} à rejoint le serveur.`)
     }).catch(console.error)
 });
 
@@ -34,7 +34,7 @@ bot.on('message', msg => {
             msg.reply('Je suis d\'accord avec toi.')
     }
     if (msg.content === prefix + "site"){
-        msg.channel.send("https://alexpgm.000webhostapp.com/")
+        msg.channel.send("Bientôt Disponible")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
 
